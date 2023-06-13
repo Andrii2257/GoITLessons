@@ -17,14 +17,13 @@ public class UserTests {
             System.exit(-1);
         }
         List<User> users = new ArrayList<>();
-        Test test = new Test();
         try (Scanner scanner = new Scanner(file)) {
             if (scanner.hasNextLine()) {
                 scanner.nextLine();
                 while (scanner.hasNextLine()) {
                     String line = scanner.nextLine();
                     String[] parts = line.split(" +");
-                    users.add(new User(parts[0], Integer.valueOf(parts[1]), test));
+                    users.add(new User(parts[0], Integer.valueOf(parts[1])));
                 }
             }
         } catch (FileNotFoundException e)  {

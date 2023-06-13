@@ -5,13 +5,11 @@ import java.io.File;
 public class User {
     private String name;
     private int age;
-    private Test test;
 
-    public User(String name, int age, Test test) {
+
+    public User(String name, int age) {
         this.name = name;
         this.age = age;
-        this.test = test;
-
     }
 
     public String getName() {
